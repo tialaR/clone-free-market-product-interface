@@ -1,0 +1,122 @@
+.sellerInfoContainer {
+  border-top: 1px solid var(--color-border);
+  padding: 2rem 1rem;
+
+  > h2 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 1.75rem;
+  }
+
+  .locationCardContainer {
+    display: flex;
+
+    > div {
+      padding-left: 0.625rem;
+
+      > p {
+        font-size: 1rem;
+
+        & + p {
+          font-size: 0.875rem;
+          font-weight: 300;
+          color: var(--color-gray);
+        }
+      }
+    }
+  }
+
+  .reputationCard {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .reputationThermometer {
+      list-style: none;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 0.438rem;
+      padding: 0 0.25rem;
+
+      > li {
+        width: 100%;
+        height: 0.5rem;
+        align-self: center;
+
+        &:nth-child(1) {
+          background: var(--reputation-1);
+        }
+        &:nth-child(2) {
+          background: var(--reputation-2);
+        }
+        &:nth-child(3) {
+          background: var(--reputation-3);
+        }
+        &:nth-child(4) {
+          background: var(--reputation-4);
+        }
+        &:nth-child(5) {
+          background: var(--reputation-5);
+        }
+
+        &.active {
+          height: 0.75rem;
+        }
+      }
+    }
+
+    .reputationRow {
+      margin-top: 1rem;
+      display: flex;
+      align-items: flex-start;
+
+      > li {
+        list-style: none;
+        width: 33%;
+        padding: 0 0.313rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        > strong {
+          font-size: 1.5rem;
+          font-weight: 400;
+          height: 30px;
+        }
+
+        > span {
+          margin-top: 0.5rem;
+          font-size: 0.75rem;
+          line-height: 1;
+          color: var(--color-gray);
+        }
+
+        position: relative;
+
+        & + li {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0.313rem;
+            left: 0;
+            height: 4.063rem;
+            border-left: 1px solid var(--color-border);
+          }
+        }
+      }
+    }
+  }
+
+  > a {
+    display: block;
+    margin-top: 2.5rem;
+    text-decoration: none;
+    color: var(--color-blue);
+    font-size: 0.875rem;
+  }
+}
+
+
+
